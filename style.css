@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+:root{
+    --char: #af6cee;
+    --char: #33f522;
+
+    --dark-char: #7614d1;
+    --dark-char: #06b824;
+
+    --text-char: gray;
+    --text-char: black;
+}
+
 /* *****************WRAPPER***************** */
 
 .wrapper{
@@ -13,7 +24,7 @@
     width: 100%;
     overflow: hidden;
 
-    background: linear-gradient(115deg, rgb(242, 236, 245) 0%, #af6cee 100%);
+    background: linear-gradient(115deg, rgb(217, 247, 217) 0%, var(--char) 100%);
 
     display: flex;
     align-items: center;
@@ -37,8 +48,8 @@
 }
 /* ****************HEADING*************** */
 h2{
-    color: gray;
-    font-weight: 400;
+    color: var(--text-char);
+    font-weight: 500;
     font-size: 1.5rem;
 }
 /* *****************OUTPUT******************* */
@@ -54,7 +65,8 @@ h2{
     box-shadow: 0 1px 5px black;
 }
 .output-text{
-    color: #7614d1;
+    color: var(--dark-char);
+    font-weight: bold;
 }
 button{
     cursor: pointer;
@@ -82,10 +94,11 @@ button{
     justify-content: space-between;
 }
 .length-text{
-    color: gray;
+    color: var(--text-char);
 }
 .length{
-    color: #7614d1;
+    color: var(--dark-char);
+    font-weight: bold;
 }
 /* ----------------------------------------- */
 .slider-container{
@@ -96,7 +109,7 @@ button{
 }
 /* ----------------------------------------- */
 label{
-    color: gray;
+    color: var(--text-char);
 }
 /* ----------------------------------------- */
 .strength{
@@ -107,7 +120,7 @@ label{
     align-items: center;
 }
 .strength-text{
-    color: gray;
+    color: var(--text-char);
 }
 .strength-color{
     border-radius: 100%;
@@ -124,16 +137,18 @@ label{
 .btn-container > button{
     width: 100%;
     border-style: none;
-    background-color:  rgb(175, 108, 238);
+    background-color:  var(--char);
     /* border-left: 2px solid #7614d1; */
-    border-bottom: 2px solid #7614d1;
+    border-bottom: 2px solid var(--dark-char);
     color: white;
     border-radius: 10px;
     padding: 0.5rem;
     font-weight: bold;
 }
 .btn-container > button:hover{
-    scale: 1.05;
+    /* scale: 1.05; */
+    background-color: var(--dark-char);
+    border-bottom: 2px solid var(--char);
     transition: scale 200ms ease;
     font-weight: initial;
 }
@@ -141,18 +156,6 @@ label{
 input[type = "checkbox"]:hover{
     cursor: pointer;
 }
-/* .cb:checked::before{
-    content: "&#10004";
-} */
-/* .cb{
-    appearance: none;
-    background-color: #af6cee;
-    height: 1rem;
-    width: 1rem;
-    border-radius: 4px;
-    border-left: 2px solid #7614d1;
-    border-bottom: 2px solid #7614d1;
-} */
 /* ------------------------------------------- */
 .output{
     position: relative;
@@ -169,7 +172,7 @@ input[type = "checkbox"]:hover{
 }
 span{
     display: block;
-    background-color:  rgb(118, 20, 209);
+    background-color:  var(--dark-char);
     border-radius: 4px;
     padding: 4px;
     color:  white;
@@ -179,13 +182,23 @@ span{
     right: 0px;
     top: -1rem;
 }
+#slider{
+    appearance: none;
+    background-color: var(--char);
+    border-radius: 1rem;
+    height: 0.5rem;
+}
+#slider::-webkit-slider-thumb{
+    appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px rgb(180, 180, 180);
+    /* z-index: 10; */
+    background-color: white;
+}
 /* ___________________MEDIA QUERIES______________________ */
 
-/* @media(max-width: 500px){
-    html{
-        font-size: 95%;
-    }
-} */
 @media(max-width: 400px){
     html{
         font-size: 95%;
