@@ -12,55 +12,65 @@
 <body>
     <div class="wrapper">
         <div class="container">
-            <h2>PASSWORD GENERATOR</h2>
+            <h2>Password Generator</h2>
             <div class="output">
                 <div class="output-text">PASSWORD</div>
                 <div class="output-btn" title="Copy">
                     <span>Copied</span>
-                    <button onclick="copy()">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"
-                            style="fill: inherit;">
-                            <path
-                                d="M64 464H288c8.8 0 16-7.2 16-16V384h48v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h64v48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM224 352c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64H448c35.3 0 64 28.7 64 64V288c0 35.3-28.7 64-64 64H224z" />
-                        </svg> -->
-                        <div style="position: relative; width: 1rem; height: 1rem; z-index: 2;">
-                            <div style="border: 3px solid black; width: inherit; height: inherit; border-radius: 2px; background-color: white; position: absolute; top: 0px; left: 0px; z-index: 5;"></div>
-                            <div style="border: 3px solid black; width: inherit; height: inherit; border-radius: 2px; position: absolute; top: -4px; left: 4px; z-index: 0;"></div>
+                    <button style="background-color: rgb(38 , 42, 61); border: none;" onclick="copy()">
+                        <div
+                            style="position: relative; width: 1rem; height: 1rem; z-index: 2; background-color: rgb(38 , 42, 61);">
+                            <div
+                                style="border: 3px solid rgb(255, 255, 255, 0.7); width: inherit; height: inherit; border-radius: 2px; background-color: rgb(38 , 42, 61); position: absolute; top: 0px; left: 0px; z-index: 5;">
+                            </div>
+                            <div
+                                style="border: 3px solid rgb(255, 255, 255, 0.7); background-color: rgb(38 , 42, 61);; width: inherit; height: inherit; border-radius: 2px; position: absolute; top: -4px; left: 4px; z-index: 0;">
+                            </div>
                         </div>
                     </button>
                 </div>
             </div>
             <div class="input">
+                
                 <div class="length-container">
                     <div class="length-text">Password Length</div>
                     <div class="length"></div>
                 </div>
+
                 <div class="slider-container">
                     <input type="range" name="" id="slider" min="1" max="20">
                 </div>
+
                 <div class="cb-container">
-                    <input type="checkbox" name="cb1" id="cb1" class="cb" checked>
-                    <label for="cb1">Include Uppercase Letters</label> <br>
-                    <input type="checkbox" name="cb2" id="cb2" class="cb">
-                    <label for="cb2">Include Lowercase Letters</label> <br>
-                    <input type="checkbox" name="cb3" id="cb3" class="cb">
-                    <label for="cb3">Include Numbers</label> <br>
-                    <input type="checkbox" name="cb4" id="cb4" class="cb">
-                    <label for="cb4">Include Symbols</label>
-                    <!-- <input type="checkbox" name="cb5" id="cb5"> -->
-                </div>
-                <div class="strength">
-                    <div class="strength-text">Strength</div>
-                    <div class="strength-color"></div>
-                </div>
-                <div class="btn-container">
-                    <button onclick="generate()">GENERATE PASSWORD</button>
+                    <div>
+                        <input type="checkbox" name="cb1" id="cb1" class="cb" checked>
+                        <label for="cb1">Include Uppercase Letters</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="cb2" id="cb2" class="cb">
+                        <label for="cb2">Include Lowercase Letters</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="cb3" id="cb3" class="cb">
+                        <label for="cb3">Include Numbers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="cb4" id="cb4" class="cb">
+                        <label for="cb4">Include Symbols</label>
+                    </div>
+
+                    <div class="strength">
+                        <div class="strength-text">Strength</div>
+                        <div class="strength-color"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button onclick="generate()">Generate </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- <script src="script.js"></script> -->
-    <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
+        <script src="script.js"></script>
 </body>
 
 </html>

@@ -5,27 +5,25 @@
 }
 
 :root{
-    --char: #af6cee;
-    --char: #33f522;
+    --char: rgb(107, 219, 107);
 
-    --dark-char: #7614d1;
-    --dark-char: #06b824;
+    --dark-char: rgb(107, 219, 107);
 
-    --text-char: gray;
-    --text-char: black;
+    --text-char: rgba(255, 255, 255, 0.8);
 }
 
 /* *****************WRAPPER***************** */
 
 .wrapper{
-    font-family: roboto;
+    font-family: poppins, sans-serif;
 
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-    background: linear-gradient(115deg, rgb(217, 247, 217) 0%, var(--char) 100%);
-
+    background: rgb(0,0,1);
+    background: linear-gradient(0deg, rgba(0,0,1,1) 0%, rgba(35,42,55,1) 87%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,12 +34,13 @@
 /* ******************CONTAINER***************** */
 
 .container{
-    background-color: white;
-    box-shadow: 2px 2px 10px black;
+    width: 30%;
+    height: 80vh;
 
     display: flex;
     flex-direction: column;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 
     padding: 1rem;
@@ -51,6 +50,8 @@ h2{
     color: var(--text-char);
     font-weight: 500;
     font-size: 1.5rem;
+    margin: auto;
+    opacity: 0.5;
 }
 /* *****************OUTPUT******************* */
 
@@ -60,31 +61,36 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(38, 42, 61);
 
     padding: 1rem;
-    box-shadow: 0 1px 5px black;
 }
 .output-text{
     color: var(--dark-char);
     font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
 }
 button{
     cursor: pointer;
 }
 
 /* ********************INPUT******************** */
+.cb-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
 
 .input{
     width: 100%;
 
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 0.8rem;
+    gap: 1rem;
 
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 1px 5px black;
+    padding: 2rem;
+    background-color: rgb(38, 42, 61);
 }
 /* -------------------------------------- */
 .length-container{
@@ -138,19 +144,14 @@ label{
     width: 100%;
     border-style: none;
     background-color:  var(--char);
-    /* border-left: 2px solid #7614d1; */
     border-bottom: 2px solid var(--dark-char);
-    color: white;
-    border-radius: 10px;
+    color: black;
     padding: 0.5rem;
-    font-weight: bold;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 .btn-container > button:hover{
-    /* scale: 1.05; */
-    background-color: var(--dark-char);
-    border-bottom: 2px solid var(--char);
-    transition: scale 200ms ease;
-    font-weight: initial;
+    background-color: rgb(75, 219, 75);
 }
 /* ------------------------------------------- */
 input[type = "checkbox"]:hover{
@@ -175,7 +176,8 @@ span{
     background-color:  var(--dark-char);
     border-radius: 4px;
     padding: 4px;
-    color:  white;
+    color:  black;
+    font-weight: 400;
     opacity: 0;
 
     position: absolute;
@@ -194,13 +196,39 @@ span{
     width: 1.5rem;
     border-radius: 50%;
     box-shadow: 0px 0px 1px 1px rgb(180, 180, 180);
-    /* z-index: 10; */
     background-color: white;
 }
 /* ___________________MEDIA QUERIES______________________ */
-
-@media(max-width: 400px){
+@media(max-width: 1080px){
+    .container{
+        width: 45%;
+        height: fit-content;
+    }
+}
+@media(max-width: 900px){
+    .container{
+        width: 60%;
+        height: fit-content;
+    }
+}
+@media(max-width: 800px){
+    .container{
+        width: 65%;
+    }
+}
+@media(max-width: 650px){
     html{
         font-size: 95%;
+    }
+    .container{
+        width: 90%;
+    }
+}
+@media(max-width: 300px) {
+    html{
+        font-size: 90%;
+    }
+    .container{
+        width: 95%;
     }
 }
